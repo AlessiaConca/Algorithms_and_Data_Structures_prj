@@ -2,7 +2,7 @@
 
 This C code is designed to analyze graphs and perform various operations on them. It includes functionality for computing shortest paths, maintaining a ranking of top graphs, and processing commands from standard input. This README provides an overview of the code's structure and key features.
 
-Features:
+>Features:
 1. Graph Analysis
 The code can read and analyze graphs represented as matrices of node connections and edge weights. It computes the sum of shortest path distances in each graph using Dijkstra's algorithm.
 
@@ -11,31 +11,32 @@ The code maintains a ranking of the top-K graphs with the shortest total path di
 
 3. Command Line Interface
 The code accepts commands from standard input, allowing you to interact with it. Two main commands are supported:
-
 A (AggiungiGrafo): Add a new graph to the analysis.
 T (TopK): Retrieve and print the top-K ranked graphs.
-Code Structure
+
+
+>Code Structure:
 The code is organized into several sections:
 
-Global Variables and Definitions:
+-Global Variables and Definitions:
 Global variables are declared to manage data and settings used throughout the code.
 Definitions for constants and macros are provided for clarity.
 
-Graph Analysis Functions:
+-Graph Analysis Functions:
 The compute_Dijkstra function calculates the sum of shortest path distances in a graph.
 Heap operations (max_heapify and build_max_heap) are used for maintaining the top-K ranking of graphs.
 The read_and_save_Graph function reads graph data from standard input, computes its shortest path sum, and updates the ranking.
 The aggiungiGrafo function is called when the "A" command is received to add a new graph to the analysis.
 
-Top-K Ranking Functions:
+-Top-K Ranking Functions:
 The print_results_by_index function prints the top-K ranked graphs by their index.
 The TopK function is called when the "T" command is received to retrieve and print the top-K ranked graphs.
 
-Main Function:
+-Main Function:
 The main function serves as the entry point of the program.
 It reads input commands, processes them, and manages the overall execution of the graph analysis.
 
-Getting Started:
+>Getting Started:
 To use this code, you can compile it and run the executable. Provide the necessary input following the specified commands ("A" for adding graphs and "T" for retrieving the top-K ranked graphs).
 
 Notes:
