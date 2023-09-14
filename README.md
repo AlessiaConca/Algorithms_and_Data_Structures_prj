@@ -16,6 +16,7 @@ T (TopK): Retrieve and print the top-K ranked graphs.
 
 
 >Code Structure:
+
 The code is organized into several sections:
 
 -Global Variables and Definitions:
@@ -37,9 +38,11 @@ The main function serves as the entry point of the program.
 It reads input commands, processes them, and manages the overall execution of the graph analysis.
 
 >Getting Started:
+
 To use this code, you can compile it and run the executable. Provide the necessary input following the specified commands ("A" for adding graphs and "T" for retrieving the top-K ranked graphs).
 
-Notes:
+>Notes:
+
 The code efficiently maintains a ranking of top-K graphs using a max heap, reducing the need for expensive sorting operations.
 It assumes that the input graphs are represented as matrices, with nodes and edge weights specified.
 
