@@ -3,7 +3,7 @@
 This C code is designed to analyze graphs and perform various operations on them. It includes functionality for computing shortest paths, maintaining a ranking of top graphs, and processing commands from standard input. This README provides an overview of the code's structure and key features.
 
 >Features:
-1. Graph Analysis;
+1. Graph Analysis:
 The code can read and analyze graphs represented as matrices of node connections and edge weights. It computes the sum of shortest path distances in each graph using Dijkstra's algorithm.
 
 2. Top-K Ranking:
