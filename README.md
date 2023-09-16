@@ -24,6 +24,7 @@ Global variables are declared to manage data and settings used throughout the co
 Definitions for constants and macros are provided for clarity.
 
 -Graph Analysis Functions:
+
 1.The compute_Dijkstra function calculates the sum of shortest path distances in a graph.
 Heap operations (max_heapify and build_max_heap) are used for maintaining the top-K ranking of graphs.
 
@@ -32,6 +33,7 @@ Heap operations (max_heapify and build_max_heap) are used for maintaining the to
 3.The aggiungiGrafo function is called when the "A" command is received to add a new graph to the analysis.
 
 -Top-K Ranking Functions:
+
 1.The print_results_by_index function prints the top-K ranked graphs by their index.
 
 2.The TopK function is called when the "T" command is received to retrieve and print the top-K ranked graphs.
