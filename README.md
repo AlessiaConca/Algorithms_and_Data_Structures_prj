@@ -42,9 +42,6 @@ Heap operations (max_heapify and build_max_heap) are used for maintaining the to
 The main function serves as the entry point of the program.
 It reads input commands, processes them, and manages the overall execution of the graph analysis.
 
->Getting Started:
-
-To use this code, you can compile it and run the executable. Provide the necessary input following the specified commands ("A" for adding graphs and "T" for retrieving the top-K ranked graphs).
 
 >Notes:
 
