@@ -48,7 +48,7 @@ long toInt(char str[],int i)
 //>>PARTE A :funzioni per aggiungiGrafo:
 
 //invoco su tutti i grafi e salvo risultato in un array
-/* quella che sarebbe un matrice in teoria ÃƒÂ¨ un vettore nella pratica
+/* quella che sarebbe un matrice in teoria è un vettore nella pratica
  * d=3
   [1,2,3] nodo 0 : 1 autoanello, peso 2 verso nodo 1, peso 3 verso nodo 2
   [4,5,6] nodo 1   etc.
@@ -61,12 +61,12 @@ int compute_Dijkstra(int vector[area], int size) { //matrice passata come parame
     int source = 0; //nodo sorgente
     int cost[area]; //vettore dei costi dal vettore dei pesi( costo INF se peso 0)
     int distance[d]; //vettore che memorizza le distanze tra i vari nodi
-    int visited[d];//tiene traccia dei nodi giÃƒÂ  visitati nei vari path (source a 1 dall'inizio)
+    int visited[d];//tiene traccia dei nodi già  visitati nei vari path (source a 1 dall'inizio)
     //int prec[d];
     int counter = 0;
     int minDistance = 0;
     int nextNode = 0;
-    int result = 0;//sennÃƒÂ² quando ho nodi irraggiungibili nel fare la somma sfora e cicla a MIN_INT
+    int result = 0;//sennò quando ho nodi irraggiungibili nel fare la somma sfora e cicla a MIN_INT
     int rootiszero = 0;
 
     //source non connessa
@@ -104,8 +104,8 @@ int compute_Dijkstra(int vector[area], int size) { //matrice passata come parame
 
 
     //inizializzo parametri primo nodo
-    distance[source] = 0;//distanza da sÃƒÂ¨
-    visited[source] = 1;//ÃƒÂ¨ visitato perchÃƒÂ¨ parto da qui
+    distance[source] = 0;//distanza da source
+    visited[source] = 1;//ÃƒÂ¨ visitato perchè parto da qui
     counter = 1; // 1 nodo visitato
 
 
@@ -116,7 +116,7 @@ int compute_Dijkstra(int vector[area], int size) { //matrice passata come parame
         minDistance = INT_MAX;//init
 
         for (int x = 0; x < d; x++) {
-            //se la distanza del nodo x da 0 ÃƒÂ¨ minore della minima computata e non l'ho visitato
+            //se la distanza del nodo x da 0 è minore della minima computata e non l'ho visitato
             if (distance[x] < minDistance && !visited[x]) {
                 minDistance = distance[x];//setta nuova distanza minima del nodo
                 nextNode = x; //setto x come prossimo nodo da cui fare i controlli
@@ -141,8 +141,8 @@ int compute_Dijkstra(int vector[area], int size) { //matrice passata come parame
 
 
                 if ((minDistance + cost[x + nextNode * d]) <
-                    distance[x]) { //se la distanza minima piÃƒÂ¹ il costo corrispondente
-                    // ÃƒÂ¨ minore di quello computato precedentemente
+                    distance[x]) { //se la distanza minima più il costo corrispondente
+                    // è minore di quello computato precedentemente
                     distance[x] = minDistance + cost[x + nextNode * d]; // aggiorno costo per arrivare al nodo x
                     //prec[x] = nextNode; //aggiorno nodo precedente per arrivarci
                 }
@@ -277,19 +277,19 @@ void read_and_save_Graph() {
 
     //dato il fatto che ho tutti i k elementi e costruito lo heap, per tutti i futuri valori
     if (NGraphs>=k){
-        //se il valore Ã¨ minore del primo (la root del max heap= valore massimo)
+        //se il valore è minore del primo (la root del max heap= valore massimo)
         if (dijkstraResult<allDijkstraResults[0].pathSum){
             //sovrascrivo il valore
             allDijkstraResults[0].pathSum=dijkstraResult;
             allDijkstraResults[0].index=NGraphs;
-            //dato il fatto che Ã¨ uno heap so che i sotto-alberi dx e sx della root sono max heap quindi posso chiamare max_heapify per ripristinare la proprietÃ  O(logn)--> al posto di merge sort
+            //dato il fatto che è uno heap so che i sotto-alberi dx e sx della root sono max heap quindi posso chiamare max_heapify per ripristinare la proprietÃ  O(logn)--> al posto di merge sort
             max_heapify(allDijkstraResults,k,0);
         }
     }
 
     NGraphs++;//incremento il contatore (serve per gli sapere quanti grafi ho letto prima)
 
-    //--non ho piÃ¹ bisogno di mergesort per sapere il piÃ¹ grande per il confronto e neanche per TopK
+    //--non ho più bisogno di mergesort per sapere il più grande per il confronto e neanche per TopK
     //--no realloc :)
 
 }
@@ -365,7 +365,7 @@ int main() { //testato fino a selezione dei comandi
 
         char cmd = buffer[0];//leggo il primo carattere
 
-        //identifica quale comando ÃƒÂ¨ stato inserito da stdin
+        //identifica quale comando è stato inserito da stdin
         switch (cmd) {
 
             case 'A'://comando AggiungiGrafo
@@ -379,7 +379,7 @@ int main() { //testato fino a selezione dei comandi
 
             case 'T': //cmando TopK
 
-                if (firstTopK == 1) {//se non ÃƒÂ¨ la prima TopK
+                if (firstTopK == 1) {//se non è la prima TopK
                     //chiama TopK
                     TopK();
                 } else {
