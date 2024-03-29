@@ -1,6 +1,6 @@
 **C Code for Graph Analysis**
 
-This C code is designed to analyze graphs and perform various operations on them. It includes functionality for computing shortest paths, maintaining a ranking of top graphs, and processing commands from standard input. This README provides an overview of the code's structure and key features.
+This C code is designed to analyze graphs and perform various operations on them. It includes functionalities for computing shortest paths, maintaining a ranking of top graphs and processing commands from standard input. This README provides an overview of the code's structure and key features.
 
 >Features:
 1. Graph Analysis:
