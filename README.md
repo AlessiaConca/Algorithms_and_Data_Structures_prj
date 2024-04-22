@@ -42,6 +42,12 @@ Heap operations (max_heapify and build_max_heap) are used for maintaining the to
 The main function serves as the entry point of the program.
 It reads input commands, processes them, and manages the overall execution of the graph analysis.
 
+>Tools:
+CLion
+Visual Studio Code
+WSL Ubuntu
+GNU Debugger (GDB)
+
 
 >Notes:
 
