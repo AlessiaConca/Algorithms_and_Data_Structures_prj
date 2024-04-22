@@ -45,8 +45,11 @@ It reads input commands, processes them, and manages the overall execution of th
 >Tools:
 
 CLion
+
 Visual Studio Code
+
 WSL Ubuntu
+
 GNU Debugger (GDB)
 
 
